@@ -11,7 +11,7 @@ export default function Weather() {
               type="search"
               placeholder="Enter a city.."
               class="form-control search-input"
-              id="city-input"
+              autoFocus="on"
             />
           </form>
         </div>
@@ -20,16 +20,20 @@ export default function Weather() {
         </div>
       </div>
 
-      <h2>Diever</h2>
+      <h1>Diever</h1>
       <ul>
         <li>Last updated: Wednesday 11:21</li>
         <li>Sunny</li>
       </ul>
 
-      <div className="row">
-        <div className="col-6">
-          <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png" />
-          <strong>20°C</strong>
+      <div className="row mt-4">
+        <div className="col-6 d-flex">
+          <img
+            src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+            className="icon"
+          />
+          <span className="temperature">20</span>
+          <span className="unit">°C</span>
         </div>
         <div className="col-6">
           <ul>

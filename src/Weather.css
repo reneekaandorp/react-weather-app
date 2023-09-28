@@ -5,3 +5,34 @@
   border: 1px solid #dadde1;
   border-radius: 10px;
 }
+
+.Weather h1 {
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.Weather ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Weather .icon {
+  position: relative;
+  bottom: 20px;
+}
+
+.Weather .temperature {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 15px;
+}
+
+.Weather .unit {
+  position: relative;
+  margin-left: 5px;
+}

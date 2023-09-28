@@ -1,7 +1,13 @@
-h1 {
+.App {
+  font-family: monospace;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+h2 {
   text-align: center;
 }
 
-footer {
+.App small {
   text-align: center;
 }
