@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 import axios from "axios";
 
@@ -59,6 +60,7 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
@@ -66,3 +68,5 @@ export default function Weather(props) {
     return "Loading...";
   }
 }
+
+<WeatherForecast />;
