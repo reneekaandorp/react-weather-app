@@ -11,3 +11,7 @@ h2 {
 .App small {
   text-align: center;
 }
+
+.App .container {
+  padding: 0;
+}
