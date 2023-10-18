@@ -23,31 +23,33 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            {forecast.map(function (dailyForecast, index)) {
-                if (index < 6) {
-                    return (
-            
-            <div className="WeatherForecast-day">{day()}</div>
-            <div className="WeatherForcast-icon">
-              <img src={forecast[0].condition.icon_url} alt="weather-icon" />
-            </div>
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">
-                {Math.round(forecast[0].temperature.maximum)}°
-              </span>
-              <span className="WeatherForecast-temperature-min">
-                {" "}
-                {Math.round(forecast[0].temperature.minimum)}°
-              </span>
-            </div>
-    );
-                    })}
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <div className="WeatherForecast-day">{day()}</div>
+                  <div className="WeatherForcast-icon">
+                    <img
+                      src={dailyForecast.condition.icon_url}
+                      alt="weather-icon"
+                    />
+                  </div>
+                  <div className="WeatherForecast-temperatures">
+                    <span className="WeatherForecast-temperature-max">
+                      {Math.round(dailyForecast.temperature.maximum)}°
+                    </span>
+                    <span className="WeatherForecast-temperature-min">
+                      {" "}
+                      {Math.round(dailyForecast.temperature.minimum)}°
+                    </span>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
-
   } else {
     let apiKey = "79t19ca06b3618febf143dc04f0o86be";
     let city = props.city;
